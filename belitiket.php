@@ -11,10 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $balita = htmlspecialchars($_POST['balita']);
     $totalHarga = htmlspecialchars($_POST['totalHarga']);
 
-    // Simpan data ke database atau proses lainnya di sini
-    // Misalnya, kode untuk menyimpan ke database
-    // ...
-
     // Tampilkan pesan sukses dengan JavaScript
     echo "<script>
             window.onload = function() {
@@ -34,27 +30,55 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("waikiki.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(38, 150, 233, 0.5);
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            max-width: 100%;
+            margin: auto;
+        }
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
         }
         form {
-            max-width: 600px;
-            margin: auto;
+            max-width: 100%;
         }
         label {
             display: block;
-            margin: 10px 0 5px;
-        }
-        input[type="text"], input[type="email"], input[type="date"], input[type="number"] {
-            width: calc(100% - 22px);
-            padding: 10px;
             margin-bottom: 10px;
         }
+        input[type="text"], input[type="email"], input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
         input[type="submit"] {
-            padding: 10px 20px;
             background-color: #4CAF50;
             color: white;
+            padding: 10px 15px;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            width: 100%;
         }
         input[type="submit"]:hover {
             background-color: #45a049;
@@ -119,6 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </script>
 </head>
 <body>
+    <div class="form-container">
     <h1>Beli Tiket Wisata</h1>
     <form method="post" action="">
         <label for="nama">Nama Pembeli:</label>
@@ -151,6 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <input type="submit" value="Beli Tiket">
     </form>
+    </div>
 
     <div id="popup">
         <div class="checkmark"></div>
