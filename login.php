@@ -50,11 +50,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     ?>
     <div class="header">
-        <img src="LOGOWaikiki.png">
+        <img src="Assets/LOGOWaikiki.png">
         <h1>WAIKIKI BEACH</h1>
         <div class="home">
             <a href="landingpage.html" class="gambarhome">
-                <img src="home.png" alt="HOME">
+                <img src="Assets/home.png" alt="HOME">
             </a>
         </div>
     </div>

@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <div class="header">
-        <img src="LOGOWaikiki.png">
+        <img src="Assets/LOGOWaikiki.png">
         <h1>WAIKIKI BEACH</h1>
     </div>
     <div class="container">
