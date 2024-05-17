@@ -1,4 +1,6 @@
 <?php
+include "koneksi.php";
+
 // Proses pengiriman data jika form telah disubmit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Escape input untuk mencegah serangan SQL Injection

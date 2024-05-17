@@ -74,3 +74,5 @@ CREATE TABLE pemesanan_tiket (
     balita INT NOT NULL,
     total_harga INT NOT NULL
 );
+
+ALTER TABLE pemesanan_tiket ADD COLUMN bukti_pembayaran VARCHAR(255);
