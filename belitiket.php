@@ -1,24 +1,32 @@
 <?php
 // Proses pengiriman data jika form telah disubmit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nama = htmlspecialchars($_POST['nama']);
-    $email = htmlspecialchars($_POST['email']);
-    $telepon = htmlspecialchars($_POST['telepon']);
-    $tanggal = htmlspecialchars($_POST['tanggal']);
-    $dewasa = htmlspecialchars($_POST['dewasa']);
-    $remaja = htmlspecialchars($_POST['remaja']);
-    $anakAnak = htmlspecialchars($_POST['anakAnak']);
-    $balita = htmlspecialchars($_POST['balita']);
-    $totalHarga = htmlspecialchars($_POST['totalHarga']);
+    // Escape input untuk mencegah serangan SQL Injection
+    $nama = $conn->real_escape_string($_POST['nama']);
+    $email = $conn->real_escape_string($_POST['email']);
+    $telepon = $conn->real_escape_string($_POST['telepon']);
+    $tanggal = $conn->real_escape_string($_POST['tanggal']);
+    $dewasa = $conn->real_escape_string($_POST['dewasa']);
+    $remaja = $conn->real_escape_string($_POST['remaja']);
+    $anakAnak = $conn->real_escape_string($_POST['anakAnak']);
+    $balita = $conn->real_escape_string($_POST['balita']);
+    $totalHarga = $conn->real_escape_string($_POST['totalHarga']);
 
-    // Tampilkan pesan sukses dengan JavaScript
-    echo "<script>
-            window.onload = function() {
-                document.getElementById('popup').style.display = 'block';
-                document.getElementById('popup').classList.add('show');
-            }
-          </script>";
+    // Query SQL untuk menyimpan data ke tabel pemesanan_tiket
+    $sql = "INSERT INTO pemesanan_tiket (nama, email, telepon, tanggal, dewasa, remaja, anak_anak, balita, total_harga)
+            VALUES ('$nama', '$email', '$telepon', '$tanggal', '$dewasa', '$remaja', '$anakAnak', '$balita', '$totalHarga')";
+
+    if ($conn->query($sql) === TRUE) {
+        // Redirect ke halaman tujuan setelah data berhasil disimpan
+        header("Location: waikikiDashboard.html");
+        exit(); // Pastikan untuk keluar dari skrip PHP setelah melakukan redirect
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 }
+
+// Tutup koneksi
+$conn->close();
 ?>
 
 <!DOCTYPE html>
