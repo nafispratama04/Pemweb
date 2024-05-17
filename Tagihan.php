@@ -28,11 +28,7 @@ $result = $conn->query($sql);
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            padding: 20px;
             background-image: url("waikiki.jpg");
             background-size: cover;
             background-position: center;
@@ -41,11 +37,11 @@ $result = $conn->query($sql);
         }
         .invoice-container {
             background-color: white;
-            padding: 30px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-            width: 800px;
-            max-width: 100%;
+            width: 80%;
+            max-width: 1000px;
             margin: auto;
         }
         .invoice-container h1 {
@@ -57,32 +53,28 @@ $result = $conn->query($sql);
             border-collapse: collapse;
             margin-bottom: 20px;
         }
-        th, td {
+        table, th, td {
             border: 1px solid #ddd;
             padding: 8px;
-            text-align: center;
+            text-align: left;
         }
         th {
             background-color: #4CAF50;
             color: white;
         }
         .action-cell {
-            width: 120px;
+            width: 150px;
             text-align: center;
         }
         .btn-bayar {
             background-color: #4CAF50;
             color: white;
             padding: 5px 10px;
-            font-size: 7px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: block;
-            width: 100%;
-            text-align: center;
-            margin-top: 10px;
             text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            text-align: center;
+            display: inline-block;
         }
         .btn-bayar:hover {
             background-color: #45a049;

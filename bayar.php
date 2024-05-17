@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["bukti_pembayaran"])) 
                                 document.getElementById('popup').style.display = 'block';
                                 document.getElementById('popup').classList.add('show');
                                 setTimeout(function(){
-                                    window.location.href = 'historyTransaksi.php';
+                                    window.location.href = 'waikikiDashboard.html';
                                 }, 2000);
                             }
                             </script>";

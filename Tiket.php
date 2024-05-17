@@ -31,15 +31,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$nama', '$email', '$telepon', '$tanggal', '$dewasa', '$remaja', '$anakAnak', '$balita', '$totalHarga')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<script>
-            showPopup();
-            setTimeout(function(){
-                window.location.href = 'waikikiDashboard.html';
-            }, 2000);
-        </script>";
+    echo "<script>
+            window.onload = function() {
+                showPopup();
+                setTimeout(function(){
+                    window.location.href = 'waikikiDashboard.html';
+                }, 2000);
+            }
+            </script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
+
+
 }
 
 // Tutup koneksi
@@ -57,7 +61,6 @@ $conn->close();
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
