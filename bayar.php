@@ -13,8 +13,12 @@ if ($conn->connect_error) {
     die("Koneksi ke database gagal: " . $conn->connect_error);
 }
 
-// Ambil ID pemesanan dari query string
-$id = $_GET['id'];
+// Periksa apakah parameter id ada dalam query string
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+} else {
+    die("ID tidak ditemukan.");
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["bukti_pembayaran"])) {
     $id = $_POST['id'];
@@ -40,13 +44,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["bukti_pembayaran"])) 
                 if ($conn->query($sql) === TRUE) {
                     echo "<script>
                             window.onload = function() {
+                                showPopup();
                                 document.getElementById('popup').style.display = 'block';
                                 document.getElementById('popup').classList.add('show');
                                 setTimeout(function(){
                                     window.location.href = 'historyTransaksi.php';
                                 }, 2000);
                             }
-                          </script>";
+                            </script>";
                 } else {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
@@ -75,11 +80,15 @@ $conn->close();
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-image: url("waikiki.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(38, 150, 233, 0.5);
         }
         .form-container {
             background-color: white;
@@ -137,6 +146,9 @@ $conn->close();
         #popup.show {
             display: block;
         }
+        #popup.show .checkmark {
+        display: inline-block;
+        }
         .checkmark {
             width: 40px;
             height: 40px;
@@ -166,7 +178,21 @@ $conn->close();
             0% { width: 0; height: 0; }
             100% { width: 12px; height: 22px; }
         }
+        @-webkit-keyframes pop-in {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+        @-webkit-keyframes draw-check {
+            0% { width: 0; height: 0; }
+            100% { width: 12px; height: 22px; }
+        }
     </style>
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('popup').classList.add('show');
+        }
+    </script>
 </head>
 <body>
     <div class="form-container">

@@ -29,11 +29,15 @@ $result = $conn->query($sql);
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-image: url("waikiki.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(38, 150, 233, 0.5);
         }
         .invoice-container {
             background-color: white;
@@ -62,10 +66,15 @@ $result = $conn->query($sql);
             background-color: #4CAF50;
             color: white;
         }
+        .action-cell {
+            width: 120px;
+            text-align: center;
+        }
         .btn-bayar {
             background-color: #4CAF50;
             color: white;
-            padding: 10px 15px;
+            padding: 5px 10px;
+            font-size: 7px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -93,6 +102,9 @@ $result = $conn->query($sql);
         }
         #popup.show {
             display: block;
+        }
+        #popup.show .checkmark {
+        display: inline-block;
         }
         .checkmark {
             width: 40px;
@@ -123,6 +135,14 @@ $result = $conn->query($sql);
             0% { width: 0; height: 0; }
             100% { width: 12px; height: 22px; }
         }
+        @-webkit-keyframes pop-in {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+        @-webkit-keyframes draw-check {
+            0% { width: 0; height: 0; }
+            100% { width: 12px; height: 22px; }
+        }
     </style>
 </head>
 <body>
@@ -141,7 +161,7 @@ $result = $conn->query($sql);
                         <th>Anak-Anak</th>
                         <th>Balita</th>
                         <th>Total Harga</th>
-                        <th>Aksi</th>
+                        <th class='action-cell'>Aksi</th>
                     </tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr>
@@ -154,8 +174,8 @@ $result = $conn->query($sql);
                         <td>" . $row["anak_anak"] . "</td>
                         <td>" . $row["balita"] . "</td>
                         <td>" . $row["total_harga"] . "</td>
-                        <td><a href='bayar.php?id=" . $row["id"] . "' class='btn-bayar'>Bayar</a></td>
-                      </tr>";
+                        <td class='action-cell'><a href='bayar.php?id=" . $row["id"] . "' class='btn-bayar'>Bayar</a></td>
+                    </tr>";
             }
             echo "</table>";
         } else {

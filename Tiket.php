@@ -31,9 +31,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$nama', '$email', '$telepon', '$tanggal', '$dewasa', '$remaja', '$anakAnak', '$balita', '$totalHarga')";
 
     if ($conn->query($sql) === TRUE) {
-        // Redirect ke halaman tujuan setelah data berhasil disimpan
-        header("Location: waikikiDashboard.html");
-        exit(); // Pastikan untuk keluar dari skrip PHP setelah melakukan redirect
+        echo "<script>
+            showPopup();
+            setTimeout(function(){
+                window.location.href = 'waikikiDashboard.html';
+            }, 2000);
+        </script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -121,6 +124,9 @@ $conn->close();
         #popup.show {
             display: block;
         }
+        #popup.show .checkmark {
+        display: inline-block;
+        }
         .checkmark {
             width: 40px;
             height: 40px;
@@ -150,6 +156,14 @@ $conn->close();
             0% { width: 0; height: 0; }
             100% { width: 12px; height: 22px; }
         }
+        @-webkit-keyframes pop-in {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+        @-webkit-keyframes draw-check {
+            0% { width: 0; height: 0; }
+            100% { width: 12px; height: 22px; }
+        }
     </style>
     <script>
         function calculateTotal() {
@@ -161,6 +175,10 @@ $conn->close();
             var total = (dewasa * 20000) + (remaja * 15000) + (anakAnak * 10000) + (balita * 5000);
 
             document.getElementById('totalHarga').value = total;
+        }
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('popup').classList.add('show');
         }
     </script>
 </head>
