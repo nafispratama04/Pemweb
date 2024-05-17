@@ -5,12 +5,23 @@
 }
 
 html{
+    margin: 0;
+    padding: 0;
     background-color:rgb(242, 250, 242);
+}
+
+body{
+    margin: 0;
+    padding: 0;
 }
 
 .LayarDalam{
     width: 1000px;
     margin: auto;
+}
+
+.LayarPenuh{
+    width: 100%;
 }
 
 nav{
@@ -35,7 +46,7 @@ nav .Logo{
 }
 
 nav .Logo img{
-    width: 70px;
+    width: 60px;
     vertical-align: middle;
 }
 
@@ -65,12 +76,22 @@ nav .Fitur ul li{
 }
 
 nav ul li a{
-    color: rgb(182, 182, 182);
+    color: white;
     text-align: center;
     padding: 0px 16px 0px 16px;
     text-decoration: none;
+    font-weight: 600;
 }
 
 nav ul li a:hover{
     text-decoration: underline;
+}
+
+/*HEADER*/
+header{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
 }
