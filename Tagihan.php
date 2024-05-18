@@ -35,6 +35,31 @@ $result = $conn->query($sql);
             background-attachment: fixed;
             background-color: rgba(38, 150, 233, 0.5);
         }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            font-size: 1em;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: color 0.3s ease;
+        }
+        .back-button:before {
+            content: "";
+            position: absolute;
+            background: #fff;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        .back-button:hover:before {
+            width: 100%;
+        }
         .invoice-container {
             background-color: white;
             padding: 20px;
@@ -138,6 +163,7 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
+    <a href="waikikiDashboard.html" class="back-button">Kembali</a>
     <div class="invoice-container">
         <h1>Invoice Pemesanan Tiket</h1>
         <?php
