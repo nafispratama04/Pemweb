@@ -65,7 +65,7 @@ $conn->close();
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url("waikiki.jpg");
+            background-image: url("Assets/waikiki.jpg");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;

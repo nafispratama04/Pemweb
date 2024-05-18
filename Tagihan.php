@@ -29,7 +29,7 @@ $result = $conn->query($sql);
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-image: url("waikiki.jpg");
+            background-image: url("Assets/waikiki.jpg");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;

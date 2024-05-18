@@ -28,13 +28,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `akun` (
-  `No_telp` varchar(100) NOT NULL,
-  `Username` varchar(100) DEFAULT NULL,
-  `Password_` varchar(100) DEFAULT NULL,
-  `Nama` varchar(100) DEFAULT NULL,
-  `email` varchar(100) NOT NULL,
-  `NIK` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `No_telp` VARCHAR(100) NOT NULL,
+  `Username` VARCHAR(100) DEFAULT NULL,
+  `Password_` VARCHAR(100) DEFAULT NULL,
+  `Nama` VARCHAR(100) DEFAULT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `NIK` VARCHAR(100) DEFAULT NULL
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -64,4 +64,4 @@ CREATE TABLE pemesanan_tiket (
   balita INT NOT NULL,
   total_harga INT NOT NULL
 );
-ALTER TABLE pemesanan_tiket ADD COLUMN bukti_pembayaran VARCHAR(255);
+ALTER TABLE `pemesanan_tiket` ADD COLUMN `bukti_pembayaran` VARCHAR(255);
