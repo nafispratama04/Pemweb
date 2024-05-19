@@ -163,9 +163,9 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
-    <a href="waikikiDashboard.html" class="back-button">Kembali</a>
+    <a href="waikikiDashboard.php" class="back-button">Kembali</a>
     <div class="invoice-container">
-        <h1>Invoice Pemesanan Tiket</h1>
+        <h1>Tagihan Pemesanan Tiket</h1>
         <?php
         if ($result->num_rows > 0) {
             echo "<table>
@@ -203,7 +203,7 @@ $result = $conn->query($sql);
     </div>
     <div id="popup">
         <div class="checkmark"></div>
-        <p>Pembayaran berhasil, silahkan menuju halaman history transaksi</p>
+        <p>Pembayaran berhasil, silahkan menuju halaman Riwayat Transaksi</p>
     </div>
     <script>
         function showPopup() {

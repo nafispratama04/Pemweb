@@ -76,7 +76,7 @@ nav .Fitur ul li{
 }
 
 nav ul li a{
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 0px 16px 0px 16px;
     text-decoration: none;

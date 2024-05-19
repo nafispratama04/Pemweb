@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $status = 'ok';
             // Set session dan redirect ke halaman index
             $_SESSION['Username'] = $Username;
-            header('Location: waikikiDashboard.html');
+            header('Location: waikikiDashboard.php');
             exit();
         } else {
             $status = 'err';

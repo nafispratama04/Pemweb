@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             window.onload = function() {
                 showPopup();
                 setTimeout(function(){
-                    window.location.href = 'waikikiDashboard.html';
+                    window.location.href = 'waikikiDashboard.php';
                 }, 2000);
             }
             </script>";
@@ -211,7 +211,7 @@ $conn->close();
     </script>
 </head>
 <body>
-    <a href="waikikiDashboard.html" class="back-button">Kembali</a>
+    <a href="waikikiDashboard.php" class="back-button">Kembali</a>
     <div class="form-container">
     <h1>Beli Tiket Wisata</h1>
     <form method="post" action="">
@@ -249,7 +249,7 @@ $conn->close();
 
     <div id="popup">
         <div class="checkmark"></div>
-        <p>Pemesanan tiket berhasil, silahkan menuju pages invoice</p>
+        <p>Pemesanan tiket berhasil, silahkan lihat Halaman Tagihan</p>
     </div>
 </body>
 </html>
