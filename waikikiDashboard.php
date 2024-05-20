@@ -35,7 +35,8 @@
             <li><a href="#Destinasi">Destinasi</a></li>
             <li><a href="Tiket.php">Tiket</a></li>
             <li><a href="Tagihan.php">Tagihan</a></li>
-            <li><a href="Riwayat.phped">Riwayat</a></li>
+            <li><a href="CetakTiket.php">CetakTiket</a></li>
+            <li><a href="Riwayat.php">Riwayat</a></li>
             <li><a href="#Kontak">Kontak</a></li>
             <li><a href="Logout.php">Logout</a></li>
           </ul>
