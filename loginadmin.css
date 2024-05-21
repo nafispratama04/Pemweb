@@ -23,15 +23,6 @@ h1{
     margin-left: 670px;
 }
 
-.login-button{
-    position: absolute;
-    margin-left: 1440px;
-    margin-top: 25px;
-    font-family: Montserrat;
-    font-size: 20px;
-    color: #ffffff;
-}
-
 .header img{
     width: 100px;
     position: absolute;
@@ -41,19 +32,19 @@ h1{
 
 .container{
     width: 500px;
-    height: 450px;
+    height: 390px;
     background-color: #ffffff;
     opacity: 80%;
     border-radius: 20px;
     position: absolute;
-    margin-top: 8vw;
+    margin-top: 10vw;
     margin-left: 34vw;
 }
 
 h2{
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 215px;
+    margin-left: 170px;
 }
 
 .tabelupdate{
@@ -94,24 +85,6 @@ h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 15px;
     font-weight: 400;
-}
-
-.tombol1{
-    height: 50px;
-    width: 300px;
-    background-color: #00EAFF;
-    position: absolute;
-    margin-left: 90px;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
-h3{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    margin-left: 125px;
-    color: black;
 }
 
 .gambarhome img{

@@ -4,22 +4,22 @@ session_start();
 
 $status = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $Username = $_POST['Username'] ?? '';
-    $Password_ = $_POST['Password_'] ?? '';
+    $Username_admin = $_POST['Username_admin'] ?? '';
+    $Password_admin = $_POST['Password_admin'] ?? '';
 
-    if (!empty($Username) && !empty($Password_)) {
+    if (!empty($Username_admin) && !empty($Password_admin)) {
         // Query SQL untuk memeriksa username dan password dengan prepared statement
         $conn = connection();
-        $query = $conn->prepare("SELECT * FROM akun WHERE Username = ? AND Password_ = ?");
-        $query->bind_param('ss', $Username, $Password_);
+        $query = $conn->prepare("SELECT * FROM admin_wisata WHERE Username_admin = ? AND Password_admin = ?");
+        $query->bind_param('ss', $Username_admin, $Password_admin);
         $query->execute();
         $result = $query->get_result();
         
         if ($result->num_rows > 0) {
             $status = 'ok';
-            // Set session dan redirect ke halaman index
-            $_SESSION['Username'] = $Username;
-            header('Location: waikikiDashboard.php');
+            // Set session dan redirect ke halaman dashboardadmin.php
+            $_SESSION['Username_admin'] = $Username_admin;
+            header('Location: dashboardadmin.php');
             exit();
         } else {
             $status = 'err';
@@ -36,8 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Login Admin</title>
+    <link rel="stylesheet" href="loginadmin.css">
 </head>
 
 <body>
@@ -50,9 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     ?>
     <div class="header">
-        <img src="Assets/LOGOWaikiki.png">
+        <img src="Assets/LOGOWaikiki.png" alt="Logo Waikiki">
         <h1>WAIKIKI BEACH</h1>
-        <a href="loginadmin.php" class="login-button">ADMIN</a>
         <div class="home">
             <a href="landingpage.html" class="gambarhome">
                 <img src="Assets/home.png" alt="HOME">
@@ -60,21 +59,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
     <div class="container">
-        <h2>Login</h2>
-        <form action="login.php" method="post">
+        <h2>Login Admin</h2>
+        <form action="loginadmin.php" method="post">
             <div class="tabelupdate">
-                <label for="Username">Username</label>
-                <input type="text" placeholder="Username" name="Username" required>
-                <label for="Password_">Password</label>
-                <input type="password" placeholder="Password" name="Password_" required>
+                <label for="Username_admin">Username</label>
+                <input type="text" placeholder="Username" name="Username_admin" required>
+                <label for="Password_admin">Password</label>
+                <input type="password" placeholder="Password" name="Password_admin" required>
             </div>
             <input class="tombol" type="submit" value="LOGIN">
         </form>
-        <div class="button-container">
-            <a href="form.php" class="tombol1">
-                <h3>DAFTAR</h3>
-            </a>
-        </div>
     </div>
 </body>
 </html>
