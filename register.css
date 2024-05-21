@@ -1,5 +1,7 @@
 body{
-    background: linear-gradient(to bottom, #ADFFFF, #00EAFF,#009DC4);
+    background-image: url('/Assets/BeachResort.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 51vw;
 }
@@ -32,7 +34,7 @@ h1{
     width: 900px;
     height: 500px;
     background-color: #ffffff;
-    opacity: 100%;
+    opacity: 80%;
     border-radius: 20px;
     position: absolute;
     margin-top: 7vw;
