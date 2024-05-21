@@ -1,3 +1,8 @@
+<?php
+require_once('function/helper.php');
+require_once('connakun.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +13,7 @@
 
 	<title>Halaman Admin</title>
 </head>
+
 <body>
 	<section id="sidebar">
 		<a href="#" class="brand">
