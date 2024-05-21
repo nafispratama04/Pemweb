@@ -65,3 +65,15 @@ CREATE TABLE pemesanan_tiket (
   total_harga INT NOT NULL
 );
 ALTER TABLE `pemesanan_tiket` ADD COLUMN `bukti_pembayaran` VARCHAR(255);
+
+CREATE TABLE admin_wisata (
+  No_register_admin VARCHAR(100) PRIMARY KEY,
+  Username_admin VARCHAR (100),
+  Nama_admin VARCHAR (100),
+  Password_admin VARCHAR(100),
+  email_admin VARCHAR(100) UNIQUE NOT NULL,
+  NIK VARCHAR(100)
+  );
+    
+INSERT INTO admin_wisata (No_register_admin, Username_admin, Nama_admin, Password_admin, email_admin, NIK)
+VALUES ('REG001256', 'adminuser1', 'Admin Satu', 'password123', 'admin1@example.com', '1234567890123456');
