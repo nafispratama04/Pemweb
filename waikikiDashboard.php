@@ -133,7 +133,42 @@
           padding: 0px 20px 0px 20px;
           font-size: 15px;
           border-radius: 6px;
+        }
+        header .overlay{
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: black;
+          opacity: 40%;
+        }
 
+        .tombolfitur{
+          position: absolute;
+          top: 1rem;
+          right:2rem;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 25px;
+          height: 20px;
+        }
+
+        .tombolfitur .garis{
+          height: 2px;
+          background-color: white;
+        }
+
+        @media screen and (max-width:1200px) {
+          .LayarDalam{
+            width: 90%;
+          }
+          nav .Fitur ul{
+            display: none;
+          }
+          .tombolfitur{
+            display: flex;
+          }
         }
     </style>
 
@@ -163,8 +198,13 @@
           /></a>
         </div>
         <div class="Fitur">
+          <a href="#" class="tombolfitur">
+            <span class="garis"></span>
+            <span class="garis"></span>
+            <span class="garis"></span>
+          </a>
           <ul>
-            <li><a href="#Destinasi">Destinasi</a></li>
+            <li><a href="#Fasilitas">Fasilitas</a></li>
             <li><a href="Tiket.php">Tiket</a></li>
             <li><a href="Tagihan.php">Tagihan</a></li>
             <li><a href="CetakTiket.php">CetakTiket</a></li>
@@ -177,6 +217,7 @@
     </nav>
     <div class="LayarPenuh">
       <header id="Beranda">
+        <div class="overlay"></div>
         <video autoplay muted loop>
           <source src="Assets/VideoPantai3.mp4" type="video/mp4" />
         </video>
