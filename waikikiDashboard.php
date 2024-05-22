@@ -164,7 +164,7 @@
         </div>
         <div class="Fitur">
           <ul>
-            <li><a href="#Destinasi">Destinasi</a></li>
+            <li><a href="#Destinasi">Fasilitas</a></li>
             <li><a href="Tiket.php">Tiket</a></li>
             <li><a href="Tagihan.php">Tagihan</a></li>
             <li><a href="CetakTiket.php">CetakTiket</a></li>
