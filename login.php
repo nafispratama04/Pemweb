@@ -52,7 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="header">
         <img src="Assets/LOGOWaikiki.png">
         <h1>WAIKIKI BEACH</h1>
-        <a href="loginadmin.php" class="login-button">ADMIN</a>
         <div class="home">
             <a href="landingpage.html" class="gambarhome">
                 <img src="Assets/home.png" alt="HOME">
