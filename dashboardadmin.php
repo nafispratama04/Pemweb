@@ -9,7 +9,7 @@ require_once('connakun.php');
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="Styling/styledashboardadmin.css">
+	<link rel="stylesheet" href="Styling/admin.css">
 
 	<title>Halaman Admin</title>
 </head>
@@ -28,7 +28,7 @@ require_once('connakun.php');
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="konfirmasiadmin.php">
                     <i class='bx bxs-check-circle'></i>
 					<span class="text">Konfirmasi</span>
 				</a>

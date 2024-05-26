@@ -9,7 +9,7 @@ require_once('connakun.php');
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="Styling/styledashboardadmin.css">
+	<link rel="stylesheet" href="Styling/admin.css">
 
 	<title>Halaman Admin</title>
 </head>
@@ -21,8 +21,8 @@ require_once('connakun.php');
 			<span class="text">Halaman Admin</span>
 		</a>
 		<ul class="side-menu top">
-			<li class="active">
-				<a href="#">
+		<li class="active">
+				<a href="dashboardadmin.php">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">Dashboard</span>
 				</a>
@@ -63,27 +63,9 @@ require_once('connakun.php');
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Dashboard</h1>
+					<h1>Konfirmasi Pesanan</h1>
 				</div>
 			</div>
-
-			<ul class="box-info">
-				<li>
-					<i class='bx bxs-calendar-check' ></i>
-					<span class="text">
-						<h3>0</h3>
-						<p>Pesanan</p>
-					</span>
-				</li>
-				<li>
-                    <i class='bx bx-money' ></i>
-					<span class="text">
-						<h3>Rp. 0</h3>
-						<p>Jumlah Laba</p>
-					</span>
-				</li>
-			</ul>
-
 
 			<div class="table-data">
 				<div class="order">
@@ -97,7 +79,8 @@ require_once('connakun.php');
 							<tr>
 								<th>User</th>
 								<th>Tanggal Pesanan</th>
-								<th>Status</th>
+								<th>Status Pembayaran</th>
+								<th>Aksi</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -108,6 +91,12 @@ require_once('connakun.php');
 								</td>
 								<td>xx-xx-xxxx</td>
 								<td><span class="status completed">Completed</span></td>
+								<td>
+									<select name="aksi">
+										<option value="option1">Belum Terbayar</option>
+										<option value="option2">Terbayar</option>
+									</select>
+								</td>
 							</tr>
 							<tr>
 								<td>
