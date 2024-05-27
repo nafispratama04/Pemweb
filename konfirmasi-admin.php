@@ -3,6 +3,22 @@ require_once('function/helper.php');
 require_once('connakun.php');
 ?>
 
+<?php
+// Koneksi ke database
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "wisata";
+// Buat koneksi
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Periksa koneksi
+if ($conn->connect_error) {
+    die("Koneksi ke database gagal: " . $conn->connect_error);
+}
+$sql = "SELECT * FROM pemesanan_tiket";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,6 +94,7 @@ require_once('connakun.php');
 						<thead>
 							<tr>
 								<th>User</th>
+								<th>ID Pesanan</th>
 								<th>Tanggal Pesanan</th>
 								<th>Rincian</th>
 								<th>Status Pembayaran</th>
@@ -86,11 +103,37 @@ require_once('connakun.php');
 							</tr>
 						</thead>
 						<tbody>
+							<?php
+							if ($result->num_rows > 0) {
+								// output data of each row
+								while($row = $result->fetch_assoc()) {
+									echo "<tr>";
+									echo "<td><i class='bx bx-user'></i><p>" . $row["nama"] . "</p></td>";
+									echo "<td>" . $row["id"] . "</td>";
+									echo "<td>" . $row["tanggal"] . "</td>";
+									echo "<td>kosong</td>";
+									echo "<td><span class='status completed'></span></td>";
+									echo "<td>
+											<select name='aksi'>
+												<option value='option1'>Belum Terbayar</option>
+												<option value='option2'>Terbayar</option>
+											</select>
+										  </td>";
+									echo "<td><a href='#' class='btn'>Simpan</a></td>";
+									echo "</tr>";
+								}
+							} else {
+								echo "0 results";
+							}
+							$conn->close();
+							?>
+<!--
 							<tr>
 								<td>
                                     <i class='bx bx-user' ></i>
 									<p>Tes</p>
 								</td>
+								<td>1</td>
 								<td>xx-xx-xxxx</td>
 								<td>Dewasa 1</td>
 								<td><span class="status completed">Completed</span></td>
@@ -104,6 +147,7 @@ require_once('connakun.php');
 									<a href="#" class="btn">Simpan</a>
 								</td>
 							</tr>
+-->
 						</tbody>
 					</table>
 			</div>
