@@ -1,25 +1,14 @@
 const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
 
-// Load the active menu item from localStorage
-const activeMenuItem = localStorage.getItem('activeMenuItem');
+allSideMenu.forEach(item=> {
+	const li = item.parentElement;
 
-allSideMenu.forEach(item => {
-    const li = item.parentElement;
-
-    // If this item was the active item, add the 'active' class
-    if (item.textContent === activeMenuItem) {
-        li.classList.add('active');
-    }
-
-    item.addEventListener('click', function () {
-        allSideMenu.forEach(i => {
-            i.parentElement.classList.remove('active');
-        })
-        li.classList.add('active');
-
-        // Save the active menu item to localStorage
-        localStorage.setItem('activeMenuItem', item.textContent);
-    })
+	item.addEventListener('click', function () {
+		allSideMenu.forEach(i=> {
+			i.parentElement.classList.remove('active');
+		})
+		li.classList.add('active');
+	})
 });
 
 

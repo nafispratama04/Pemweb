@@ -21,7 +21,7 @@ require_once('connakun.php');
 			<span class="text">Halaman Admin</span>
 		</a>
 		<ul class="side-menu top">
-		<li class="<?php echo basename($_SERVER['PHP_SELF']) == 'dashboardadmin.php' ? 'active' : ''; ?>">
+		<li>
 			<a href="dashboardadmin.php">
 				<i class='bx bxs-dashboard' ></i>
 				<span class="text">Dashboard</span>
