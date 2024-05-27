@@ -21,18 +21,18 @@ require_once('connakun.php');
 			<span class="text">Halaman Admin</span>
 		</a>
 		<ul class="side-menu top">
-		<li class="active">
-				<a href="dashboardadmin.php">
-					<i class='bx bxs-dashboard' ></i>
-					<span class="text">Dashboard</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-                    <i class='bx bxs-check-circle'></i>
-					<span class="text">Konfirmasi</span>
-				</a>
-			</li>
+		<li class="<?php echo basename($_SERVER['PHP_SELF']) == 'dashboardadmin.php' ? 'active' : ''; ?>">
+			<a href="dashboardadmin.php">
+				<i class='bx bxs-dashboard' ></i>
+				<span class="text">Dashboard</span>
+			</a>
+		</li>
+		<li class="<?php echo basename($_SERVER['PHP_SELF']) == 'konfirmasiadmin.php' ? 'active' : ''; ?>">
+			<a href="konfirmasiadmin.php">
+				<i class='bx bxs-check-circle'></i>
+				<span class="text">Konfirmasi</span>
+			</a>
+		</li>
 		</ul>
 		<ul class="side-menu">
 			<li>
@@ -119,5 +119,6 @@ require_once('connakun.php');
 			</div>
 		</main>
 	</section>
+	<script src="admin.js"></script>
 </body>
 </html>

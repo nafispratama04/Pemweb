@@ -130,5 +130,6 @@ require_once('connakun.php');
 			</div>
 		</main>
 	</section>
+	<script src="script.js"></script>
 </body>
 </html>
