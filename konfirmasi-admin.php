@@ -9,7 +9,7 @@ require_once('connakun.php');
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="Styling/admin.css">
+	<link rel="stylesheet" href="style/admin.css">
 
 	<title>Halaman Admin</title>
 </head>
@@ -27,8 +27,8 @@ require_once('connakun.php');
 				<span class="text">Dashboard</span>
 			</a>
 		</li>
-		<li class="<?php echo basename($_SERVER['PHP_SELF']) == 'konfirmasiadmin.php' ? 'active' : ''; ?>">
-			<a href="konfirmasiadmin.php">
+		<li class="<?php echo basename($_SERVER['PHP_SELF']) == 'konfirmasi-admin.php' ? 'active' : ''; ?>">
+			<a href="konfirmasi-admin.php">
 				<i class='bx bxs-check-circle'></i>
 				<span class="text">Konfirmasi</span>
 			</a>
@@ -79,7 +79,9 @@ require_once('connakun.php');
 							<tr>
 								<th>User</th>
 								<th>Tanggal Pesanan</th>
+								<th>Rincian</th>
 								<th>Status Pembayaran</th>
+								<th>Konfirmasi</th>
 								<th>Aksi</th>
 							</tr>
 						</thead>
@@ -90,6 +92,7 @@ require_once('connakun.php');
 									<p>Tes</p>
 								</td>
 								<td>xx-xx-xxxx</td>
+								<td>Dewasa 1</td>
 								<td><span class="status completed">Completed</span></td>
 								<td>
 									<select name="aksi">
@@ -97,28 +100,15 @@ require_once('connakun.php');
 										<option value="option2">Terbayar</option>
 									</select>
 								</td>
-							</tr>
-							<tr>
 								<td>
-                                    <i class='bx bx-user' ></i>
-									<p>Tes</p>
+									<a href="#" class="btn">Simpan</a>
 								</td>
-								<td>xx-xx-xxxx</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-                                    <i class='bx bx-user' ></i>
-									<p>Tes</p>
-								</td>
-								<td>xx-xx-xxxx</td>
-								<td><span class="status process">Process</span></td>
 							</tr>
 						</tbody>
 					</table>
 			</div>
 		</main>
 	</section>
-	<script src="admin.js"></script>
+	<script src="script/admin.js"></script>
 </body>
 </html>
