@@ -14,7 +14,7 @@ try {
 
     // Periksa koneksi
     if ($conn->connect_error) {
-        throw new Exception("Koneksi ke database gagal: " . $conn->connect_error);
+        throw new Exception("connection failed: " . $conn->connect_error);
     }
 
     $sql = "SELECT * FROM pemesanan_tiket";
@@ -117,8 +117,8 @@ try {
 									echo "<td>" . $row["id"] . "</td>";
 									echo "<td>" . $row["tanggal"] . "</td>";
 									echo "<td>kosong</td>";
-									echo "<td><span class='status completed'></span></td>";
-									echo "<td>
+									echo "<td>" . (!empty($row["bukti_pembayaran"]) ? $row["bukti_pembayaran"] : "belum ada bukti bayar") . "</td>";
+										echo "<td>
 											<select name='aksi'>
 												<option value='option1'>Belum Terbayar</option>
 												<option value='option2'>Terbayar</option>
