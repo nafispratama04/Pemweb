@@ -1,22 +1,27 @@
 <?php
 require_once('function/helper.php');
 require_once('connakun.php');
-?>
 
-<?php
 // Koneksi ke database
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "wisata";
-// Buat koneksi
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Periksa koneksi
-if ($conn->connect_error) {
-    die("Koneksi ke database gagal: " . $conn->connect_error);
+
+try {
+    // Buat koneksi
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Periksa koneksi
+    if ($conn->connect_error) {
+        throw new Exception("Koneksi ke database gagal: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT * FROM pemesanan_tiket";
+    $result = $conn->query($sql);
+} catch (Exception $e) {
+    die("An error occurred: " . $e->getMessage());
 }
-$sql = "SELECT * FROM pemesanan_tiket";
-$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
