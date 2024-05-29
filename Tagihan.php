@@ -179,6 +179,7 @@ $result = $conn->query($sql);
                         <th>Anak-Anak</th>
                         <th>Balita</th>
                         <th>Total Harga</th>
+                        <th>Status Pembayaran</th>
                         <th class='action-cell'>Aksi</th>
                     </tr>";
             while($row = $result->fetch_assoc()) {
@@ -192,6 +193,7 @@ $result = $conn->query($sql);
                         <td>" . $row["anak_anak"] . "</td>
                         <td>" . $row["balita"] . "</td>
                         <td>" . $row["total_harga"] . "</td>
+                        <td>" . $row["status_pembayaran"] . "</td>
                         <td class='action-cell'><a href='bayar.php?id=" . $row["id"] . "' class='btn-bayar'>Bayar</a></td>
                     </tr>";
             }

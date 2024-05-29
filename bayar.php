@@ -35,13 +35,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["bukti_pembayaran"])) 
     if (in_array($fileExt, $allowed)) {
         if ($fileError === 0) {
             if ($fileSize < 1000000) {
-                $fileNameNew = uniqid('', true) . "." . $fileExt;
-                $fileDestination = 'uploads/' . $fileNameNew;
-                move_uploaded_file($fileTmpName, $fileDestination);
+                // Baca file PDF sebagai data biner
+                $pdfData = file_get_contents($fileTmpName);
 
-                $sql = "UPDATE pemesanan_tiket SET bukti_pembayaran='$fileNameNew' WHERE id='$id'";
+                $sql = "UPDATE pemesanan_tiket SET bukti_pembayaran=?, nama_file=? WHERE id=?";
+                $stmt = $conn->prepare($sql);
 
-                if ($conn->query($sql) === TRUE) {
+                // Bind parameter untuk statement
+                $stmt->bind_param("ssi", $pdfData, $fileName, $id);
+
+                if ($stmt->execute()) {
                     echo "<script>
                             window.onload = function() {
                                 showPopup();
@@ -51,10 +54,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["bukti_pembayaran"])) 
                                     window.location.href = 'waikikiDashboard.php';
                                 }, 2000);
                             }
-                            </script>";
+                          </script>";
                 } else {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
+
+                $stmt->close();
             } else {
                 echo "File terlalu besar!";
             }
