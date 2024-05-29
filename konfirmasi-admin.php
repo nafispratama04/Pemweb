@@ -109,6 +109,7 @@ try {
 						</thead>
 						<tbody>
 							<?php
+							try{
 							if ($result->num_rows > 0) {
 								// output data of each row
 								while($row = $result->fetch_assoc()) {
@@ -130,7 +131,9 @@ try {
 							} else {
 								echo "0 results";
 							}
-							$conn->close();
+							$conn->close();} catch (Exception $e) {
+								die("An error occurred: " . $e->getMessage());
+							}
 							?>
 <!--
 							<tr>
