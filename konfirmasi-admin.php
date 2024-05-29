@@ -85,83 +85,6 @@ try {
                     <h1>Konfirmasi Pesanan</h1>
                 </div>
             </div>
-
-<<<<<<< HEAD
-			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Daftar Pesanan</h3>
-						<i class='bx bx-search' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>User</th>
-								<th>ID Pesanan</th>
-								<th>Tanggal Pesanan</th>
-								<th>Rincian</th>
-								<th>Status Pembayaran</th>
-								<th>Konfirmasi</th>
-								<th>Aksi</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php
-							try{
-							if ($result->num_rows > 0) {
-								// output data of each row
-								while($row = $result->fetch_assoc()) {
-									echo "<tr>";
-									echo "<td><i class='bx bx-user'></i><p>" . $row["nama"] . "</p></td>";
-									echo "<td>" . $row["id"] . "</td>";
-									echo "<td>" . $row["tanggal"] . "</td>";
-									echo "<td>kosong</td>";
-									echo "<td>" . (!empty($row["bukti_pembayaran"]) ? $row["bukti_pembayaran"] : "belum ada bukti bayar") . "</td>";
-										echo "<td>
-											<select name='aksi'>
-												<option value='option1'>Belum Terbayar</option>
-												<option value='option2'>Terbayar</option>
-											</select>
-										  </td>";
-									echo "<td><a href='#' class='btn'>Simpan</a></td>";
-									echo "</tr>";
-								}
-							} else {
-								echo "0 results";
-							}
-							$conn->close();} catch (Exception $e) {
-								die("An error occurred: " . $e->getMessage());
-							}
-							?>
-<!--
-							<tr>
-								<td>
-                                    <i class='bx bx-user' ></i>
-									<p>Tes</p>
-								</td>
-								<td>1</td>
-								<td>xx-xx-xxxx</td>
-								<td>Dewasa 1</td>
-								<td><span class="status completed">Completed</span></td>
-								<td>
-									<select name="aksi">
-										<option value="option1">Belum Terbayar</option>
-										<option value="option2">Terbayar</option>
-									</select>
-								</td>
-								<td>
-									<a href="#" class="btn">Simpan</a>
-								</td>
-							</tr>
--->
-						</tbody>
-					</table>
-			</div>
-		</main>
-	</section>
-	<script src="script/admin.js"></script>
-=======
             <div class="table-data">
                 <div class="order">
                     <div class="head">
@@ -172,13 +95,13 @@ try {
                     <table>
                         <thead>
                             <tr>
-                                <th>User</th>
+                                <th>Nama Pemesan</th>
                                 <th>ID Pesanan</th>
                                 <th>Tanggal Pesanan</th>
-                                <th>Rincian</th>
+                                <th>Rincian Pesanan</th>
                                 <th>Lihat Pembayaran</th>
                                 <th>Status Pembayaran</th>
-                                <th>Aksi</th>
+                                <th>Tombol Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -221,6 +144,5 @@ try {
         </main>
     </section>
     <script src="script/admin.js"></script>
->>>>>>> 140128d7e50c328b1a7fc6887a0d604d349bbfb1
 </body>
 </html>
