@@ -141,10 +141,11 @@
           height: 100%;
           width: 100%;
           background-color: black;
-          opacity: 40%;
+          opacity: 45%;
         }
 
         .tombolfitur{
+          display: none;
           position: absolute;
           top: 1rem;
           right:2rem;
@@ -159,12 +160,27 @@
           background-color: white;
         }
 
-        @media screen and (max-width:1200px) {
+        @media screen and (max-width:1200px){
           .LayarDalam{
             width: 90%;
           }
           nav .Fitur ul{
             display: none;
+            margin-top: 60px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+          }
+          nav .Fitur ul li{
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            background-color: white;
+            line-height: 40px;
+          }
+          nav .Fitur ul li a{
+            color: black;
           }
           .tombolfitur{
             display: flex;
@@ -231,5 +247,9 @@
         </div>
       </header>
     </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="jsdashboard.js"></script>
+
   </body>
 </html>
