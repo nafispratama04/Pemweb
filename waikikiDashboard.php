@@ -286,7 +286,7 @@
     <nav>
       <div class="LayarDalam">
         <div class="logoDashboard">
-          <a href="">
+          <a href="https://www.google.com" target="_blank">
             <img src="Assets/LOGOWaikiki.png" class="navgelap"/>
           </a>
         </div>
@@ -338,11 +338,11 @@
 
             <p class="isimoreinfo">Tempat Istirahat yang Sempurna Waikiki menawarkan berbagai pilihan akomodasi untuk memenuhi kebutuhan setiap wisatawan. Dari hotel mewah tepi pantai hingga hostel yang ramah budget, Anda akan menemukan tempat yang ideal untuk beristirahat dan melepas penat.</p>
 
-            <p class="isimoreinfo">Tips Berkunjung Waktu terbaik untuk mengunjungi Waikiki adalah antara bulan Mei dan September, saat cuaca hangat dan cerah.
-            Gunakan tabir surya dengan SPF tinggi, karena sinar matahari di Hawaii cukup kuat.
-            Bawa uang tunai, karena beberapa toko kecil mungkin tidak menerima kartu kredit.
-            Pelajari beberapa frasa bahasa Hawaii dasar, seperti "aloha" (halo) dan "mahalo" (terima kasih).
-            Hargai budaya dan adat istiadat lokal.
+            <p class="isimoreinfo">Tips Berkunjung: <br> - Waktu terbaik untuk mengunjungi Waikiki adalah antara bulan Mei dan September, saat cuaca hangat dan cerah. <br>
+            - Gunakan tabir surya dengan SPF tinggi, karena sinar matahari di Hawaii cukup kuat.<br>
+            - Bawa uang tunai, karena beberapa toko kecil mungkin tidak menerima kartu kredit.<br>
+            - Pelajari beberapa frasa bahasa Hawaii dasar, seperti "aloha" (halo) dan "mahalo" (terima kasih).<br>
+            - Hargai budaya dan adat istiadat lokal.<br><br>
             Waikiki menanti Anda untuk merasakan pengalaman liburan yang tak terlupakan. Ayo, kemas tas Anda dan bersiaplah untuk menjelajahi surga tropis ini!</p>
           </div>
         </section>
@@ -356,31 +356,31 @@
           <div>
             <img src="Assets/gambar1.jpg" alt="">
             <h6>Selancar</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum maiores optio asperiores et, amet possimus iusto laborum sit. Porro consectetur eligendi ab id omnis quaerat doloremque eos illo molestias est.</p>
+            <p>Nikmati serunya berselancar di tengah-tengah ombak waikiki yang siap membawamu berfantasi di atas papan selancar.</p>
           </div>
 
           <div>
             <img src="Assets/gambar2.jpg" alt="">
             <h6>Perahu</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum maiores optio asperiores et, amet possimus iusto laborum sit. Porro consectetur eligendi ab id omnis quaerat doloremque eos illo molestias est.</p>
+            <p>Ingin merasakan sensasi berlayar bagai pelaut setempat saat mencari ikan di tengah laut? Perahu-perahu ini siap membawamu ke sana!</p>
           </div>
 
           <div>
             <img src="Assets/gambar3.jpg" alt="">
             <h6>Yatch</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum maiores optio asperiores et, amet possimus iusto laborum sit. Porro consectetur eligendi ab id omnis quaerat doloremque eos illo molestias est.</p>
+            <p>Manjakan dirimu dengan berlayar menggunakan kapal pesiar dengan segala kemewahan dan kenyamanannya.</p>
           </div>
 
           <div>
             <img src="Assets/gambar4.jpg" alt="">
             <h6>Jetski</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum maiores optio asperiores et, amet possimus iusto laborum sit. Porro consectetur eligendi ab id omnis quaerat doloremque eos illo molestias est.</p>
+            <p>Bosan dengan selancar dan ingin menguji adrenalinmu melawan ombak waikiki? Jetski selalu hadir dan siap untuk kau bawa menjelajahi lautan kekuasaanmu.</p>
           </div>
 
           <div>
             <img src="Assets/gambar5.jpg" alt="">
             <h6>Resort</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum maiores optio asperiores et, amet possimus iusto laborum sit. Porro consectetur eligendi ab id omnis quaerat doloremque eos illo molestias est.</p>
+            <p>Nikmati indahnya pesona pantai waikiki dengan fasilitas-fasilitas menarik dan hidangan khas pantai waikiki yang berkelas dengan megunjungi resort terdekat.</p>
           </div>
         </section>
       </main>
