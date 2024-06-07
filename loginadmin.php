@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $status = 'ok';
             // Set session dan redirect ke halaman dashboardadmin.php
             $_SESSION['Username_admin'] = $Username_admin;
-            header('Location: dashboardadmin.php');
+            header('Location: dashboard-admin.php');
             exit();
         } else {
             $status = 'err';
