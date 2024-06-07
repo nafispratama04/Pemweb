@@ -42,7 +42,7 @@ try {
         </a>
         <ul class="side-menu top">
             <li>
-                <a href="dashboardadmin.php">
+                <a href="dashboard-admin.php">
                     <i class='bx bxs-dashboard'></i>
                     <span class="text">Dashboard</span>
                 </a>
