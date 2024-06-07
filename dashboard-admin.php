@@ -150,30 +150,29 @@ try {
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>
-                                    <i class='bx bx-user' ></i>
-									<p>Tes</p>
-								</td>
-								<td>xx-xx-xxxx</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr>
-							<tr>
-								<td>
-                                    <i class='bx bx-user' ></i>
-									<p>Tes</p>
-								</td>
-								<td>xx-xx-xxxx</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-                                    <i class='bx bx-user' ></i>
-									<p>Tes</p>
-								</td>
-								<td>xx-xx-xxxx</td>
-								<td><span class="status process">Process</span></td>
-							</tr>
+							<?php
+							$sql = "SELECT nama, tanggal, status_pembayaran, bukti_pembayaran FROM pemesanan_tiket";
+							$result = $conn->query($sql);
+
+							if ($result->num_rows > 0) {
+								while($row = $result->fetch_assoc()) {
+									echo "<tr>";
+									echo "<td>";
+									echo "<i class='bx bx-user' ></i>";
+									echo "<p>" . $row["nama"] . "</p>";
+									echo "</td>";
+									echo "<td>" . $row["tanggal"] . "</td>";
+									if ($row["status_pembayaran"] == "Terbayar" && $row["bukti_pembayaran"] !== NULL) {
+										echo "<td><span class='status completed'>Completed</span></td>";
+									} else if ($row["status_pembayaran"] == "Belum Terbayar" && $row["bukti_pembayaran"] !== NULL) {
+										echo "<td><span class='status process'>Process</span></td>";
+									} else if ($row["bukti_pembayaran"] == NULL) {
+										echo "<td><span class='status pending'>Pending</span></td>";
+									}
+									echo "</tr>";
+								}
+							}
+							?>
 						</tbody>
 					</table>
 			</div>
