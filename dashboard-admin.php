@@ -1,7 +1,29 @@
 <?php
 require_once('function/helper.php');
 require_once('connakun.php');
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "wisata";
+
+try {
+    // Buat koneksi
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Periksa koneksi
+    if ($conn->connect_error) {
+        throw new Exception("connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT * FROM pemesanan_tiket";
+    $result = $conn->query($sql);
+} catch (Exception $e) {
+    die("An error occurred: " . $e->getMessage());
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,14 +93,41 @@ require_once('connakun.php');
 				<li>
 					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
-						<h3>0</h3>
+						<h3>
+						<?php
+							$sql = "SELECT COUNT(*) as jumlahpesanan FROM pemesanan_tiket";
+							$result = $conn->query($sql);
+
+							if ($result->num_rows > 0) {
+								while($row = $result->fetch_assoc()) {
+									if ($row["jumlahpesanan"] >=1) {
+										echo " " . $row["jumlahpesanan"];
+									} else {
+										echo "Tidak Tersedia";
+									}
+								}
+							}?>
+						</h3>
 						<p>Pesanan</p>
 					</span>
 				</li>
 				<li>
                     <i class='bx bx-money' ></i>
 					<span class="text">
-						<h3>Rp. 0</h3>
+						<h3>
+						<?php
+							$sql = "SELECT SUM(total_harga) as jumlahlaba FROM pemesanan_tiket";
+							$result = $conn->query($sql);
+							if ($result->num_rows > 0) {
+								while($row = $result->fetch_assoc()) {
+									if ($row["jumlahlaba"] !== NULL) {
+										echo " Rp. " . $row["jumlahlaba"];
+									} else {
+										echo "Tidak Tersedia";
+									}
+								}
+							}?>
+						</h3>
 						<p>Jumlah Laba</p>
 					</span>
 				</li>
