@@ -190,6 +190,7 @@
           font-size: 18px;
           color: #ababab;
           margin-bottom: -35px;
+          padding-bottom: 45px;
         }
         #moreinfo{
           text-align: center;
@@ -209,7 +210,7 @@
           flex-direction: row;
           justify-content: space-around;
           overflow: hidden;
-          padding: 10px 0px 10px 0px;
+          padding: 15px 0px 50px 0px;
         }
         section#galeri div{
           padding: 10px;
@@ -238,6 +239,60 @@
           font-size: 18px;
           font-weight: 400;
           color: #333;
+        }
+
+        /* BAGIAN PROFIL KELOMPOK */
+        #kelompok{
+          text-align: center;
+          background-color: #4C5154;
+        }
+        #kelompok h3{
+          color: rgb(242, 250, 242);
+        }
+        #TimKami h6{
+          color: rgb(242, 250, 242);
+        }
+        section p.RingkasanKelompok{
+          font-style: italic;
+          font-size: 18px;
+          color: #ababab;
+          margin-bottom: -35px;
+        }
+        section#TimKami{
+          background-color: #4C5154;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          overflow: hidden;
+          padding: 40px 0px 100px 0px;
+        }
+        section#TimKami div{
+          padding: 2px;
+          text-align: center;
+          width: 26%;
+        }
+        section#TimKami div img{
+          height: 120px;
+          border-radius: 100px;
+          margin-bottom: -35px;
+        }
+        section#TimKami div img:hover{
+          transition: all 0.2s ease-in-out;
+          transform: scale(1.1);
+        }
+        section#TimKami div img h6{
+          margin: 0px;
+          padding: 0px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        section#TimKami p{
+          margin: 0px;
+          margin-top: -40px;
+          padding: 0px;
+          font-size: 18px;
+          font-weight: 400;
+          color: rgb(242, 250, 242);
         }
         
         @media screen and (max-width:1200px){
@@ -302,7 +357,7 @@
             <li><a href="Tagihan.php">Tagihan</a></li>
             <li><a href="CetakTiket.php">CetakTiket</a></li>
             <li><a href="Riwayat.php">Riwayat</a></li>
-            <li><a href="#Tim">Tim</a></li>
+            <li><a href="#kelompok">Tim</a></li>
             <li><a href="Logout.php">Logout</a></li>
           </ul>
         </div>
@@ -381,6 +436,54 @@
             <img src="Assets/gambar5.jpg" alt="">
             <h6>Resort</h6>
             <p>Nikmati indahnya pesona pantai waikiki dengan fasilitas-fasilitas menarik dan hidangan khas pantai waikiki yang berkelas dengan megunjungi resort terdekat.</p>
+          </div>
+        </section>
+
+        <section id="kelompok">
+          <div class="LayarDalam">
+            <h3>Tim Kami</h3>
+            <p class="RingkasanKelompok">Tim perancang website wisata pantai waikiki.<br>KELOMPOK 8, Kelas Pemrorgaman Web (E), Informatika, UPN "Veteran" Jawa Timur</p>
+          </div>
+        </section>
+        <section id="TimKami">
+          <div>
+            <a href="https://wa.me/+6281252016743" target="_blank">
+              <img src="Assets/tomo.jpg" alt="">
+            </a>
+            <h6> Dwijo Utomo R P</h6>
+            <p>22081010220</p>
+          </div>
+
+          <div>
+            <a href="https://wa.me/+6281230917090" target="_blank">
+              <img src="Assets/leon.jpg" alt="">
+            </a>
+            <h6>Leon Dewandaru P</h6>
+            <p>22081010221</p>
+          </div>
+
+          <div>
+            <a href="https://wa.me/+6281230186641" target="_blank">
+              <img src="Assets/nafis.jpg" alt="">
+            </a>
+            <h6>Nafis Pratama P</h6>
+            <p>22081010230</p>
+          </div>
+
+          <div>
+            <a href="https://wa.me/+6282229121208" target="_blank">
+              <img src="Assets/sandy.jpg" alt="">
+            </a>
+            <h6>Sandy Nicholas</h6>
+            <p>22081010237</p>
+          </div>
+
+          <div>
+            <a href="https://wa.me/+6281352239228" target="_blank">
+              <img src="Assets/panggih.jpg" alt="">
+            </a>
+            <h6>Panggih Santri</h6>
+            <p>22081010241</p>
           </div>
         </section>
       </main>
