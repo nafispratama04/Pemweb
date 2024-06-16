@@ -358,6 +358,7 @@
             <li><a href="CetakTiket.php">CetakTiket</a></li>
             <li><a href="Riwayat.php">Riwayat</a></li>
             <li><a href="#kelompok">Tim</a></li>
+            <li><a href="profil.php">Profil</a></li>
             <li><a href="Logout.php">Logout</a></li>
           </ul>
         </div>
