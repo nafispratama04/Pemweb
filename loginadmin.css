@@ -1,9 +1,25 @@
 body{
-    background-image: url('Assets/BeachResort.jpg');
+    background-image: url('Assets/gambar5.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
     height: 51vw;
+}
+
+.success{
+    position: absolute;
+    margin-top: -28px;
+    margin-left: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+}
+
+.error{
+    position: absolute;
+    margin-top: 190px;
+    margin-left: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
 }
 
 .header{

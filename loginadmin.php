@@ -41,14 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <?php
-    // menampilkan pesan sukses atau error
-    if ($status == 'ok') {
-        echo '<div class="success">Login berhasil!</div>';
-    } elseif ($status == 'err') {
-        echo '<div class="error">ERROR!, Username atau Password salah</div>';
-    }
-    ?>
     <div class="header">
         <img src="Assets/LOGOWaikiki.png" alt="Logo Waikiki">
         <h1>WAIKIKI BEACH</h1>
@@ -60,6 +52,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <div class="container">
         <h2>Login Admin</h2>
+        <?php
+        // menampilkan pesan sukses atau error
+        if ($status == 'ok') {
+            echo '<div class="success">Login berhasil!</div>';
+        } elseif ($status == 'err') {
+            echo '<div class="error">ERROR!, Username atau Password salah</div>';
+        }
+        ?>
         <form action="loginadmin.php" method="post">
             <div class="tabelupdate">
                 <label for="Username_admin">Username</label>
