@@ -3,12 +3,12 @@ include('connakun.php');
 session_start();
 
 $status = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Username = $_POST['Username'] ?? '';
     $Password_ = $_POST['Password_'] ?? '';
 
     if (!empty($Username) && !empty($Password_)) {
-        // Query SQL untuk memeriksa username dan password dengan prepared statement
         $conn = connection();
         $query = $conn->prepare("SELECT * FROM akun WHERE Username = ? AND Password_ = ?");
         $query->bind_param('ss', $Username, $Password_);
@@ -17,8 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         if ($result->num_rows > 0) {
             $status = 'ok';
-            // Set session dan redirect ke halaman index
+            $data = $result->fetch_assoc(); 
+
+            $_SESSION['No_telp'] = $data['No_telp'];
             $_SESSION['Username'] = $Username;
+            
             header('Location: waikikiDashboard.php');
             exit();
         } else {
@@ -32,14 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
 </head>
-
 <body>
     <div class="header">
         <img src="Assets/LOGOWaikiki.png">

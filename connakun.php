@@ -18,3 +18,4 @@ function connection()
 
     return $conn;
 }
+?>
