@@ -246,12 +246,14 @@ h2{
     margin-left: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 17px;
+    color: black;
 }
 
 .tabelupdate label{
     display: block;
+    text-align: left;
     padding: 25px;
-    margin-left: -22px;
+    margin-left: -5px;
     font-weight: 400;
 }
 
@@ -274,12 +276,14 @@ h2{
     font-size: 17px;
     margin-left: 450px;
     margin-top: -300px;
+    color: black;
 }
 
 .tabelupdate1 label{
     display: block;
+    text-align: left;
     padding: 25px;
-    margin-left: -22px;
+    margin-left: -5px;
     font-weight: 400;
 }
 

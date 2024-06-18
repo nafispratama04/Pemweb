@@ -37,7 +37,6 @@ $conn->close();
     </style>
 </head>
 <body>
-   
 <a href="waikikiDashboard.php" class="back-button">Kembali</a>
 
 <?php
@@ -54,7 +53,7 @@ if ($result->num_rows > 0) {
         $anakAnak = $row["anak_anak"];
         $balita = $row["balita"];
         $totalHarga = $row["total_harga"];
-        $statusPembayaran = $row["status_pembayaran"]; // Asumsi kolom ini ada di tabel
+        $statusPembayaran = $row["status_pembayaran"];
 
         echo '
         <div class="ticket" id="ticket-' . $id . '">
@@ -110,12 +109,17 @@ if ($result->num_rows > 0) {
         window.print();
 
         document.body.innerHTML = originalContents;
-        location.reload();  // Reload the page to restore the original content
 
         // Update status pemesanan menjadi "Sudah Selesai"
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "update_status.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                alert('Status pemesanan telah diperbarui menjadi "Sudah Selesai"');
+                location.reload();  // Reload the page to update the status in the table
+            }
+        };
         xhr.send("id=" + id + "&status_pemesanan=Sudah Selesai");
     }
 

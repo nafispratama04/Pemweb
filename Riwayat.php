@@ -46,7 +46,7 @@
             border-radius: 10px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
             width: 80%;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
         }
         .invoice-container h1 {
