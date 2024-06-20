@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="header">
         <img src="Assets/LOGOWaikiki.png">
-        <h1>WAIKIKI BEACH</h1>
+        <h1>PANTAI SRAU</h1>
         <div class="home">
             <a href="landingpage.html" class="gambarhome">
                 <img src="Assets/home.png" alt="HOME">
