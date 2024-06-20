@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PantaiWaikiki</title>
+    <title>Pantai Srau</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=0.1" />
@@ -372,8 +372,8 @@
         </video>
 
         <div class="intro">
-          <h3>PANTAI WAIKIKI</h3>
-          <p>Manjakan Dirimu di Hari Liburan Bersama Pantai Waikiki</p>
+          <h3>PANTAI SRAU</h3>
+          <p>Manjakan Dirimu di Hari Liburan Bersama Pantai Srau</p>
           <p>
             <a href="#moreinfo" class="tombolmoreinfo">MORE INFO</a>
           </p>
@@ -382,29 +382,30 @@
       <main>
       <section id="moreinfo">
           <div class="LayarDalam">
-            <h3>FYI Tentang Pantai Waikiki</h3>
-            <p class="isimoreinfo">Pantai Waikiki: Surga Tropis di Jantung Honolulu
-            Terletak di selatan Pulau Oahu, Hawaii, Pantai Waikiki bagaikan permata berkilauan yang menawarkan pesona alam memukau dan keramahan budaya Hawaii. Lebih dari sekadar pantai yang indah, Waikiki adalah destinasi wisata yang lengkap, memadukan pasir putih yang halus, air biru jernih, dan panorama Gunung Berapi Diamond Head yang ikonik.</p>
+            <h3>FYI Tentang Pantai Srau</h3>
+            <p class="isimoreinfo">Pantai Srau, yang terletak di Pacitan, Jawa Timur, adalah salah satu destinasi wisata yang memikat dengan keindahan alamnya yang masih alami dan menenangkan. Pantai ini terkenal dengan pasir putihnya yang lembut dan air laut yang jernih, yang berwarna biru kehijauan. Suasana tenang dan damai di pantai ini menjadikannya tempat yang sempurna untuk beristirahat dan menikmati keindahan alam jauh dari keramaian kota. Dikelilingi oleh tebing-tebing karst yang menjulang tinggi dan vegetasi hijau yang subur, Pantai Srau menawarkan pemandangan yang menakjubkan dan mengundang siapa saja untuk datang dan menikmati keindahannya.</p>
 
-            <p class="isimoreinfo">Lebih dari Sekadar Berjemur Waikiki bukan hanya tentang berjemur di bawah sinar matahari. Pantai ini menawarkan berbagai aktivitas air yang seru, mulai dari berenang, berselancar, dan snorkeling hingga kayak, paddleboarding, dan parasailing. Bagi yang ingin bersantai, terdapat banyak pilihan, seperti berjalan-jalan di sepanjang Kalakaua Avenue yang ramai, piknik di Kapiolani Park yang rindang, atau menikmati kuliner khas Hawaii di berbagai restoran tepi pantai.</p>
+            <p class="isimoreinfo">Salah satu daya tarik utama Pantai Srau adalah tiga bagian pantai yang masing-masing memiliki karakteristik unik. Bagian pertama adalah tempat yang paling sering dikunjungi oleh wisatawan karena pasirnya yang putih bersih dan ombaknya yang relatif tenang. Bagian kedua memiliki karakteristik yang lebih berbatu dan sering digunakan oleh para pemancing lokal. Sedangkan bagian ketiga memiliki ombak yang lebih besar, menjadikannya surga bagi para peselancar yang mencari tantangan. Ketiga bagian pantai ini menawarkan pengalaman yang berbeda dan menarik bagi para pengunjung.</p>
 
-            <p class="isimoreinfo">Jelajahi Budaya Lokal Waikiki adalah tempat yang tepat untuk merasakan budaya Hawaii yang kaya. Kunjungi Royal Hawaiian Center untuk berbelanja souvenir dan mempelajari sejarah kerajaan Hawaii. Saksikan pertunjukan hula yang memukau di Polynesian Cultural Center, atau jelajahi Iolani Palace, bekas kediaman resmi para raja dan ratu Hawaii.</p>
+            <p class="isimoreinfo">Pantai Srau juga dikenal dengan ombaknya yang besar dan kuat, yang merupakan daya tarik utama bagi para peselancar. Pada musim-musim tertentu, peselancar dari berbagai daerah datang ke Pantai Srau untuk menaklukkan ombaknya yang menantang. Meski demikian, bagi para wisatawan yang tidak tertarik dengan selancar, pantai ini tetap menawarkan banyak kegiatan menyenangkan seperti berenang, bermain pasir, atau sekadar bersantai menikmati pemandangan laut yang memukau.</p>
 
-            <p class="isimoreinfo">Surga Kuliner Waikiki memanjakan lidah para pecinta kuliner dengan beragam pilihan restoran, mulai dari hidangan laut segar hingga masakan internasional. Cicipi poke tradisional Hawaii, nikmati burger lezat di salah satu kafe kekinian, atau temukan restoran fine dining dengan pemandangan pantai yang menakjubkan.</p>
+            <p class="isimoreinfo">Akses menuju Pantai Srau memang memerlukan sedikit usaha, karena jalannya yang berliku dan berbatu. Namun, perjalanan yang menantang ini justru menambah keunikan dan keseruan tersendiri. Setibanya di pantai, segala lelah dan jerih payah perjalanan akan terbayar dengan pemandangan yang menakjubkan dan suasana yang damai. Infrastruktur di sekitar pantai masih tergolong minim, sehingga pengunjung disarankan untuk membawa perbekalan sendiri, terutama jika berniat untuk berkemah.</p>
 
-            <p class="isimoreinfo">Tempat Istirahat yang Sempurna Waikiki menawarkan berbagai pilihan akomodasi untuk memenuhi kebutuhan setiap wisatawan. Dari hotel mewah tepi pantai hingga hostel yang ramah budget, Anda akan menemukan tempat yang ideal untuk beristirahat dan melepas penat.</p>
+            <p class="isimoreinfo">Keindahan Pantai Srau tidak hanya terlihat di siang hari. Malam di pantai ini juga sangat mempesona dengan langit yang penuh bintang. Bagi para pecinta alam dan fotografer, Pantai Srau menawarkan banyak kesempatan untuk mengambil foto-foto yang spektakuler. Berkemah di tepi pantai, ditemani suara deburan ombak dan angin laut yang sejuk, memberikan pengalaman yang tak terlupakan dan mendalam.</p>
 
-            <p class="isimoreinfo">Tips Berkunjung: <br> - Waktu terbaik untuk mengunjungi Waikiki adalah antara bulan Mei dan September, saat cuaca hangat dan cerah. <br>
-            - Gunakan tabir surya dengan SPF tinggi, karena sinar matahari di Hawaii cukup kuat.<br>
+            <p class="isimoreinfo">Pantai Srau adalah destinasi yang sempurna bagi mereka yang ingin merasakan keindahan alam yang masih alami dan belum terjamah banyak wisatawan. Di sini, pengunjung bisa benar-benar melarikan diri dari hiruk-pikuk kehidupan sehari-hari dan menikmati ketenangan alam yang murni. Dengan keindahan alam yang luar biasa dan suasana yang tenang, Pantai Srau adalah tempat yang wajib dikunjungi bagi setiap pencinta alam dan petualangan.</p>
+
+            <p class="isimoreinfo">Tips Berkunjung: <br> - Waktu terbaik untuk mengunjungi Pantai Srau adalah antara bulan Mei dan September, saat cuaca hangat dan cerah. <br>
+            - Gunakan tabir surya dengan SPF tinggi, karena sinar matahari di Pacitan cukup kuat.<br>
             - Bawa uang tunai, karena beberapa toko kecil mungkin tidak menerima kartu kredit.<br>
-            - Pelajari beberapa frasa bahasa Hawaii dasar, seperti "aloha" (halo) dan "mahalo" (terima kasih).<br>
+            - Pelajari beberapa frasa bahasa yang digunakan orang daerah Pacitan<br>
             - Hargai budaya dan adat istiadat lokal.<br><br>
-            Waikiki menanti Anda untuk merasakan pengalaman liburan yang tak terlupakan. Ayo, kemas tas Anda dan bersiaplah untuk menjelajahi surga tropis ini!</p>
+            Pantai Srau menanti Anda untuk merasakan pengalaman liburan yang tak terlupakan. Ayo, kemas tas Anda dan bersiaplah untuk menjelajahi surga tropis ini!</p>
           </div>
         </section>
         <section id="fasilitas">
           <div class="LayarDalam">
-            <h3>Fasilitas Waikiki</h3>
+            <h3>Fasilitas Srau</h3>
             <p class="RingkasanFasilitas">Beragam fasilitas menarik akan memanjakan dirimu di hari libur yang spesial. Di sini semuanya kami sediakan untukmu.</p>
           </div>
         </section>
